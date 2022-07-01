@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Página inicial</title>
+        <meta charset="UTF-8">
+        <style>
+            body{
+                margin-left:30%;
+                margin-top:10%;
+                border-width:1px;
+            }
+
+            .button_centralize{ 
+                margin-left:20%;
+            }
+
+            .centralize{margin-left:5%}
+        </style>
+        <script>
+            function myFunction(myValue){
+                document.getElementById("currentValue").innerHTML = myValue;
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1 class="centralize">Mercado Livre Scraper</h1>
+        <form action="/resultado">
+            Digite aqui o que deseja procurar :
+            <input type="text" name="item"><br>
+
+            Valor máximo : 
+            <input type="range" oninput="myFunction(this.value)" name="valor"  max="10000" min="0" step="100"><span id="currentValue">0</span><br><br>
+
+            <input type="submit" value="Procurar" class="button_centralize">
+        </form>
+    </body>
+</html>
